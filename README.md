@@ -28,15 +28,56 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. Describe the biggest difference between `.forEach` & `.map`.
+//------------------------------------------------------------------------------------------------------------------
+
+
+1. Describe the biggest difference between .forEach & .map.
+
+1a. The forEach() method doesn't actually return anything (undefined). It simply calls a provided function on each element in your array. This callback is allowed to mutate the calling array.
+
+1b. The difference is that the map() function utilizes return values and actually returns a new Array of the same size.
+
+//-------------------------------------------------------------------------------------------------------------------
 
 2. What is the difference between a function and a method?
 
+Functions return some value but methods don't return anything.
+
+Functions have an independent existence which means they are defined outside the class. The main difference between a function and a method is a method is always called using the object of that class in which the method is written.
+
+//-------------------------------------------------------------------------------------------------------------------
+
 3. What is closure?
+
+A closure is the combination of a function and the lexical environment within which that function was declared.
+
+//-------------------------------------------------------------------------------------------------------------------
 
 4. Describe the four rules of the 'this' keyword.
 
+Window/Global Object Binding
+
+• A global object is an object that always exists in the global scope. In JavaScript, there's always a global object defined. In a web browser, when scripts create global variables, they're created as members of the global object.
+
+Implicit Binding
+
+• Implicit binding occurs when dot notation is used to invoke a function. I.e. - In implicit binding, whatever is to the left of the dot becomes the context for this in the function.
+
+New binding
+
+• Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+
+Explicit binding
+
+• Explicit binding of "this" occurs when .call(), .apply(), or .bind() are used on a function.
+
+//-------------------------------------------------------------------------------------------------------------------
+
 5. Why do we need super() in an extended class?
+
+The super keyword is used to access and call functions on an object's parent. Without using the .call method.
+
+//-------------------------------------------------------------------------------------------------------------------
 
 ## Project Set up
 
