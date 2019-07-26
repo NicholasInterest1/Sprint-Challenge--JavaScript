@@ -99,14 +99,13 @@ Log the result of your new array. */
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
-
-let uni = university.filter(function(spelling){
-  return spelling.university === 'Uni';
-});
-
+const uni = [];
+for(i = 0; i < graduates.length; i++) {
+  if(graduates[i].university.indexOf("Uni") !== -1) {
+    uni.push(graduates[i].university);
+  }
+}
 console.log(uni);
-
-// console.log(university.filter());
 
 // ==== ADVANCED Array Methods ====
 
@@ -130,9 +129,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 
-zooAnimals.forEach(function(animal){
-  console.log(`Name: ${animal.animal_name}  Scientific: ${animal.scientific_name}`)
-});
+// zooAnimals.forEach(function(animal){
+//   console.log(`Name: ${animal.animal_name}  Scientific: ${animal.scientific_name}`)
+// });
 
 
 /* Request 2: .map()    
@@ -141,10 +140,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-let smallLetters = zooAnimals.map(function(lowerNames){
-  return lowerNames.animal_name.toLowerCase();
-});
-console.log(smallLetters); 
+// let smallLetters = zooAnimals.map(function(lowerNames){
+//   return lowerNames.animal_name.toLowerCase();
+// });
+// console.log(smallLetters); 
 
 /* Request 3: .filter() 
 
@@ -152,11 +151,11 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 
-let lowerPopulation = zooAnimals.filter(function(lowPop){
-  return lowPop.population < '5';
-});
+// let lowerPopulation = zooAnimals.filter(function(lowPop){
+//   return lowPop.population < '5';
+// });
 
-console.log(lowerPopulation);
+// console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
 
@@ -164,11 +163,11 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 
-let populationTotal = zooAnimals.reduce(function(acc, total){
-  return acc + total.population;
-},0);
+// let populationTotal = zooAnimals.reduce(function(acc, total){
+//   return acc + total.population;
+// },0);
 
-console.log(populationTotal);
+// console.log(populationTotal);
 
 
 /* 
